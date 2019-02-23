@@ -31,20 +31,20 @@ database.connect().then(() => {
       artifact.dependsOn(reader.getPackages(release.tag_name).then((packages) => {
         return writer.writeList(models.PackageRelease, packages, (artifact, pkg) => {
           artifact.dependsOn(writer.writeList(models.ComponentRelease, pkg.definitions, (artifact, definition, name) => {
-            const id = name + release.tag_name;
+            const id = name + ':' + release.tag_name;
             console.log("Writing component-release: " + id);
             artifact.set({
               id: id,
               attributes: {
                 name: name,
                 version: pkg.version,
-                definition: deepClean(definition),
+                definition: database.MongooseWriter.cleanKeys(definition),
                 package: pkg.name + ':' + release.tag_name,
                 release: release.tag_name,
               },
             });
           }).dependency((transaction) => {
-            const id = pkg.name + release.tag_name;
+            const id = pkg.name + ':' + release.tag_name;
             console.log("Writing package-release: " + id);
 
             artifact.set({
