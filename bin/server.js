@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 const express = require("express"),
-  config = require("./lib/config"),
-  database = require("./lib/database"),
-  jsonapi = require("./lib/jsonapi");
+  config = require("../lib/config"),
+  database = require("../lib/database"),
+  jsonapi = require("../lib/jsonapi");
 
 database.connect().then(() => {
   const app = express(),
