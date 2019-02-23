@@ -1,0 +1,15 @@
+db: 'mongodb://mongo/bolt'
+git:
+  clone:
+    url: 'https://github.com/bolt-design-system/bolt.git'
+    target: './.boltcache'
+  releases:
+    url: 'https://api.github.com/repos/bolt-design-system/bolt/releases'
+    json: true,
+    headers:
+      'User-Agent': 'Bolt-Discovery'
+docs:
+  template: './templates/documentation.pug'
+server:
+  host: "http://bolt-discovery.docksal"
+  port: 3000

@@ -1,0 +1,21 @@
+{
+  "name": "@bolt/discovery-api",
+  "version": "0.0.0",
+  "description": "Bolt.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christopher Smith",
+  "license": "ISC",
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "glob": "^7.1.3",
+    "json-api": "^3.0.0-rc.6.0.1",
+    "lerna": "^3.13.0",
+    "mongoose": "^5.4.13",
+    "request": "^2.88.0",
+    "shelljs": "^0.8.3",
+    "yaml": "^1.3.2"
+  }
+}
