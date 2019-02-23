@@ -5,7 +5,7 @@ services:
   cli:
     image: ${COMPOSE_PROJECT_NAME_SAFE}/cli
     build: cli
-    command: ["bash", "-lc", "nodemon --legacy-watch /var/www/index.js"]
+    command: ["bash", "-lc", "nodemon --legacy-watch /var/www/bin/server.js"]
     volumes:
       - project_root:/var/www:rw
 
