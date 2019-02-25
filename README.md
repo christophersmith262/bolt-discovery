@@ -5,4 +5,9 @@ Exposes bolt release metadata over a standards-compliant API service.
 - https://jsonapi.org/
 
 ## Running Locally
-Install https://docksal.io/ and run `fin init`. Documentation for the api will be available at `http://bolt-discovery.docksal`.
+* Esnure https://docksal.io/ is installed.
+* Clone the repository.
+* `cp default.config.yml config.yml`
+* `fin init`.
+
+Documentation for the api will be available at `http://bolt-discovery.docksal`.
