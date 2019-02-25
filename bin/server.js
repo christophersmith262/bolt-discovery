@@ -38,7 +38,7 @@ database.connect().then(() => {
   ]));
 
   app.get('/:type(package-releases)/:id/components', jsonapi.handler([
-    new jsonapi.query.RelatedQuery("component-releases", "release"),
+    new jsonapi.query.RelatedQuery("component-releases", "package"),
     new jsonapi.query.Pagination(),
   ]));
 
